@@ -1,4 +1,4 @@
-my_packages <- c("gt", "showtext", "tidyverse")
+my_packages <- c("gt", "showtext", "tidyverse", "httpgd")
 librarian::shelf(my_packages)
 
 # Showtext test
@@ -21,6 +21,8 @@ text(2, 70, "샘플수 = 1000", family = "bm_hana", cex = 2.5)
 p <- ggplot(mtcars, aes(wt, mpg, label = rownames(mtcars)))
 
 p + geom_text(family="bm_hana") -> p_hana
+
+# Showtext works in gt table?
 
 dplyr::tibble(
   text = "Here is a ggplot:",
